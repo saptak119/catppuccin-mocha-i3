@@ -1,0 +1,6 @@
+
+
+@theme "~/.config/rofi/catppuccin-mocha.rasi"
+configuration {
+    font: "JetBrainsMono Nerd Font 12";
+}
