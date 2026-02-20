@@ -42,7 +42,7 @@
 
 ## Terminal-Look
 
-![terminal](terminals.png)
+![terminal](screenshot/terminals.png)
 
 ## yazi
 
