@@ -1,0 +1,24 @@
+;; Define the window (The Bar itself)
+(defwindow bar
+  :monitor 0
+  :windowtype "dock"
+  :geometry (geometry :x "0%"
+                       :y "0%"
+                       :width "100%"
+                       :height "30px"
+                       :anchor "top center")
+  :reserve (struts :side "top" :distance "30px")
+  (bar_layout))
+
+;; Define the layout
+(defwidget bar_layout []
+  (box :orientation "h"
+    (label :text "Arch + i3")
+    (time_widget)))
+
+;; Define a widget that pulls system time
+(defpoll time :interval "1s" "date '+%H:%M:%S'")
+
+(defwidget time_widget []
+  (box :class "time"
+    time))

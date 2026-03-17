@@ -1,0 +1,14 @@
+* {
+  all: unset; // Reset default GTK styles
+  font-family: "Ubuntu Nerd Font", sans-serif;
+}
+
+.bar_layout {
+  background-color: #282a36;
+  color: #f8f8f2;
+}
+
+.time {
+  margin-right: 10px;
+  font-weight: bold;
+}

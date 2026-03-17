@@ -1,0 +1,2 @@
+enable_cover = false
+player_backend = "gstreamer"
