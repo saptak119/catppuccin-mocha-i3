@@ -3,4 +3,6 @@
 @theme "~/.config/rofi/catppuccin-mocha.rasi"
 configuration {
     font: "JetBrainsMono Nerd Font 12";
+modes: [window,drun,run,ssh,emoji];
 }
+

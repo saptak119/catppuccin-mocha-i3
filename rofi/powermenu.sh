@@ -20,7 +20,23 @@ case "$chosen" in
     Logout)
         i3-msg exit
         ;;
-    Lock)
-        i3lock -c 000000
+   Lock)
+        # Path to your desired lockscreen wallpaper
+        WALLPAPER="/home/saptak/wallpaper/wall/sakura-trees-over-river.jpg"
+
+        i3lock \
+            -i "$WALLPAPER" \
+	    --fill \
+            --clock \
+            --indicator \
+            --time-str="%H:%M:%S" \
+            --date-str="%A, %b %d" \
+            --ring-color="b4befeff" \
+            --inside-color="00000000" \
+            --keyhl-color="7aa2f7ff" \
+            --separator-color="00000000" \
+            --radius 100 \
+            --ring-width 15
+	    
         ;;
 esac

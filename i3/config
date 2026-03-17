@@ -38,7 +38,7 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 #gaps for polybar
-gaps top 27
+#gaps top 27
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -61,7 +61,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +2%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 2%-
 
 #wallpaper
-exec_always --no-startup-id feh --randomize --bg-scale ~/wallpaper/
+exec_always --no-startup-id feh --bg-scale ~/wallpaper/wall/pink-clouds.jpg
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -188,7 +188,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Polybar
-exec_always --no-startup-id killall polybar; polybar main &
+#exec_always --no-startup-id killall polybar; polybar main &
 
 #picom
 exec_always --no-startup-id picom
@@ -224,5 +224,21 @@ bindsym $mod+Print exec flameshot gui -p ~/Pictures/screenshot
 #conky
 exec --no-startup-id conky
 
-# Run EWW.
-#exec --no-startup-id eww
+#imoji-rofi
+bindsym $mod+z exec rofi -show emoji
+
+# Disable floating and ignore the app's requested small size
+for_window [class="MEGAsync"] floating disable; border normal; floating_maximum_size -1 x -1
+
+# Sets a reasonable starting size for all floating windows
+floating_minimum_size 800 x 600
+floating_maximum_size 1600 x 900
+
+# Force common dialogs and file pickers to tile instead of float
+for_window [window_role="GtkFileChooserDialog"] floating disable
+for_window [window_role="^xdg-desktop-portal-.*$"] floating disable
+for_window [title="(?i)open file"] floating disable
+for_window [title="(?i)upload"] floating disable
+
+exec_always --no-startup-id eww open bar
+
