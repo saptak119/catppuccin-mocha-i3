@@ -1,5 +1,7 @@
 # Catppuccin Mocha i3 Setup🌿
 
+## Now under development(shifting to eww)
+
 ## OS:arch (will work with other too)
 
 ## Dependencies🧩
