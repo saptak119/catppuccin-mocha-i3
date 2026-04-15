@@ -1,7 +1,7 @@
 # Catppuccin Mocha i3 Setup🌿
 
 ## Now under development(shifting to eww)
-# dropped eww just use polybar for now
+### dropped eww just use polybar for now
 
 ## OS:arch (will work with other too)
 
